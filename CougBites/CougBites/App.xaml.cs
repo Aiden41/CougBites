@@ -41,14 +41,38 @@ namespace CougBites
             MainPage = new AppShell();
         }
 
-        async public void Datatest()
+        public async void Datatest()
         {
-            if (database == null)
-                Log.Debug("LOL", "KC SUCKS");
-            await App.database.SaveFoodAsync(new Models.FoodItem
-            {
-                Name = "Muffin"
-            });
+            string filename = "CougBites.food.csv";
+            database._database.CreateTableAsync<Models.FoodItem>();
+            database._database.CreateTableAsync<Models.Location>();
+            database._database.CreateTableAsync<Models.Profile>();
+            database._database.CreateTableAsync<Models.Rating>();
+            using (var stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(filename))
+            //using (var stream = File.OpenRead(filename))
+            using (var reader = new StreamReader(stream))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {                              //1    2       3       4    5      6     7     8     9   10     11
+                //var trash = reader.ReadLine(); //id  name   locID   desc  sat    sun   mon   tue   b/l   s     d
+                //var foodItems = new List<(int, string, int, string, int, int, int, int, int, int, int)>();
+                if (reader != null)
+                {
+                    csv.Read();
+                    while (csv.Read())
+                    {
+                        database.SaveFoodAsync(new Models.FoodItem
+                        {
+                            ID = csv.GetField<int>(0),
+                            Name = csv.GetField<string>(1),
+                            LocationID = csv.GetField<int>(2),
+                            Description = csv.GetField<string>(3),
+                            DaysAvailable = new List<int> { csv.GetField<int>(4), csv.GetField<int>(5), csv.GetField<int>(6), csv.GetField<int>(7) },
+                            TimesAvailable = new List<int> { csv.GetField<int>(8), csv.GetField<int>(9), csv.GetField<int>(10) },
+                            Picture = csv.GetField<string>(11)
+                        });
+                    }
+                }
+            }
         }
 
         protected override void OnStart()
