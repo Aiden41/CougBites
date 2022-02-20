@@ -8,13 +8,9 @@ using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using System.Collections.Generic;
-using Android.OS;
-using Android.Content.Res;
-using Android.Content;
 using System.Reflection;
-using CsvHelper;
 using System.Globalization;
-using Android.Util;
+using CsvHelper;
 
 namespace CougBites
 {
