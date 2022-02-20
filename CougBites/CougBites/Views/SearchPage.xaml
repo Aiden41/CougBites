@@ -7,10 +7,6 @@
              xmlns:model="clr-namespace:CougBites.Models"  
              x:Name="BrowseItemsPage">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
-    </ContentPage.ToolbarItems>
-
     <Grid BackgroundColor="#FFFFFF" RowSpacing="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
