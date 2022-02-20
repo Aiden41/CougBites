@@ -10,6 +10,7 @@ using Xamarin.Essentials;
 using System.IO;
 using Android.Util;
 using System.Linq;
+using Android.Content;
 
 namespace CougBites.Droid
 {
@@ -26,7 +27,6 @@ namespace CougBites.Droid
             Window.AddFlags(Android.Views.WindowManagerFlags.TranslucentNavigation);
             LoadApplication(new App());
             List<Models.FoodItem> foods = await App.database.GetFoodAsync();
-            Log.Debug("lol", foods[0].ID.ToString());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
