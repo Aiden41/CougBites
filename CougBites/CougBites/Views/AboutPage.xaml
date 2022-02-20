@@ -73,9 +73,9 @@
 
         <!--<ScrollView Grid.Row="3" Margin="5" BackgroundColor="LightGray">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Start developing now" FontSize="Title" TextColor="DarkBlue"/>
-                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
-                <Label FontSize="16" Padding="0,24,0,0">
+                <Label Text="Start developing now" FontSize="Title" TextColor="#4d4d4d"/>
+                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0" TextColor="#4D4D4D"/>
+                <Label FontSize="16" Padding="0,24,0,0" TextColor="#4d4d4d">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
