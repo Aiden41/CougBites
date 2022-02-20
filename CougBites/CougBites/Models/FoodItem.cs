@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using SQLite;
 
 namespace CougBites.Models
@@ -8,11 +9,11 @@ namespace CougBites.Models
         [PrimaryKey, AutoIncrement]
         public int ID   { get; set; }
         public string Name { get; set; }
-        //public int LocationID { get; set; }
-        //public string Description   { get; set; }
-        //public Boolean[] DaysAvailable { get; set; }
-        //public Boolean[] TimesAvailable { get; set; }
-        //public string Picture { get; set; }
+        public int LocationID { get; set; }
+        public string Description { get; set; }
+        public List<int> DaysAvailable { get; set; }
+        public List<int> TimesAvailable { get; set; }
+        public string Picture { get; set; }
 
     }
 }

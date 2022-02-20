@@ -8,6 +8,13 @@ using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using System.Collections.Generic;
+using Android.OS;
+using Android.Content.Res;
+using Android.Content;
+using System.Reflection;
+using CsvHelper;
+using System.Globalization;
+using Android.Util;
 
 namespace CougBites
 {
@@ -19,10 +26,7 @@ namespace CougBites
         {
             get
             {
-                if(database == null)
-                {
-                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyDB.db3"));
-                }
+                database = new Database(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), "MyDB.db3"));
 
                 return database;
             }
@@ -30,15 +34,17 @@ namespace CougBites
 
         public App()
         {
-            database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyDB.db3"));
-            InitializeComponent();    
+            database = new Database(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), "MyDB.db3"));
+            Datatest();
+            InitializeComponent();
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
-            Datatest();
         }
 
         async public void Datatest()
         {
+            if (database == null)
+                Log.Debug("LOL", "KC SUCKS");
             await App.database.SaveFoodAsync(new Models.FoodItem
             {
                 Name = "Muffin"
