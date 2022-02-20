@@ -46,7 +46,7 @@ namespace CougBites
             return _database.Table<Models.Profile>().ToListAsync();
         }
 
-        public Task<int> SaveLocationAsync(Models.Rating rat)
+        public Task<int> SaveRatingAsync(Models.Rating rat)
         {
             return _database.InsertAsync(rat);
         }

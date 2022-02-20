@@ -73,8 +73,134 @@ namespace CougBites
                     }
                 }
             }
-        }
 
+            database.SaveProfileAsync(new Models.Profile
+            {
+                ID = 1,
+                Name = "Alice",
+
+            });
+
+            database.SaveProfileAsync(new Models.Profile
+            {
+                ID = 2,
+                Name = "John",
+
+            });
+
+            database.SaveProfileAsync(new Models.Profile
+            {
+                ID = 3,
+                Name = "Alex",
+
+            });
+
+            database.SaveProfileAsync(new Models.Profile
+            {
+                ID = 4,
+                Name = "Conor",
+
+            });
+
+            database.SaveProfileAsync(new Models.Profile
+            {
+                ID = 5,
+                Name = "Aiden",
+
+            });
+
+            database.SaveLocationAsync(new Models.Location
+            {
+                ID = 0,
+                Name = "Southside Cafe",
+                Picture = "southside.png",
+                Description = "2580 NE Grimes Way, Pullman, WA 99163\n(509) 335-3372\n"
+
+            });
+
+            database.SaveLocationAsync(new Models.Location
+            {
+                ID = 1,
+                Name = "Hillside Cafe",
+                Picture = "hillside.png",
+                Description = "Wilmer-Davis Hall, Pullman, WA 99163\n(509) 335-3050\n"
+
+            });
+
+            database.SaveLocationAsync(new Models.Location
+            {
+                ID = 2,
+                Name = "Northside Cafe",
+                Picture = "northside.png",
+                Description = "Stearns Residence Hall Pullman,WA 99163\n"
+            });
+
+            database.SaveRatingAsync(new Models.Rating
+            {
+                UserId = 1,
+                FoodId = 1,
+                Description = "Eh.",
+                RatingNum = 2.5
+            });
+
+            database.SaveRatingAsync(new Models.Rating
+            {
+                UserId = 1,
+                FoodId = 6,
+                Description = "Amazing!!",
+                RatingNum = 5
+            });
+
+            database.SaveRatingAsync(new Models.Rating
+            {
+                UserId = 2,
+                FoodId = 6,
+                Description = "It was average.",
+                RatingNum = 4
+            });
+
+            database.SaveRatingAsync(new Models.Rating
+            {
+                UserId = 2,
+                FoodId = 1,
+                Description = "Really good.",
+                RatingNum = 4.5
+            });
+
+            database.SaveRatingAsync(new Models.Rating
+            {
+                UserId = 3,
+                FoodId = 1,
+                Description = "Could've been better",
+                RatingNum = 3
+            });
+
+            database.SaveRatingAsync(new Models.Rating
+            {
+                UserId = 3,
+                FoodId = 6,
+                Description = "Terrible.",
+                RatingNum = 1
+            });
+
+            database.SaveRatingAsync(new Models.Rating
+            {
+                UserId = 4,
+                FoodId = 1,
+                Description = "ugh",
+                RatingNum = 2
+            });
+
+            database.SaveRatingAsync(new Models.Rating
+            {
+                UserId = 4,
+                FoodId = 6,
+                Description = "Coug'd it",
+                RatingNum = 2
+            });
+
+        }
+        
         protected override void OnStart()
         {
         }

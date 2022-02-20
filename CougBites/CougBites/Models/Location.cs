@@ -12,7 +12,5 @@ namespace CougBites.Models
         public string Name { get; set; }
         public string Picture { get; set; }
         public string Description { get; set; }
-        public FoodItem[] FoodItems { get; set; }
-        public string Menu { get; set; }
     }
 }
