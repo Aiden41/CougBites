@@ -114,7 +114,7 @@
     <AndroidResource Include="Resources\drawable\icon_planner.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\app_icon.png" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\leftArrow.png" />
@@ -129,7 +129,7 @@
     <AndroidResource Include="Resources\drawable\ButtonSmol.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\2ndButton.png" />
+    <AndroidResource Include="Resources\drawable\SecomndButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

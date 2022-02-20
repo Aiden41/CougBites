@@ -74,38 +74,45 @@
         <StackLayout Grid.Row="3"
                      Grid.ColumnSpan="3"
                      Orientation="Horizontal"
-                     Margin="20,0,25,0"
+                     Margin="0,0,0,5"
                      BackgroundColor="White">
 
-            <ImageButton Source="2Button.png"
+            <ImageButton Source="SecomndButton.png"
                 HorizontalOptions="Start"                       
-                Scale="1.3"/>
-            <ImageButton Source="2Button.png"
-                HorizontalOptions="CenterAndExpand"
-                Scale="1.3"/>
-            <ImageButton Source="2Button.png"
+                Scale="1.1"/>
+            <ImageButton Source="SecomndButton.png"
+                HorizontalOptions="Center"
+                Scale="1.1"/>
+            <ImageButton Source="SecomndButton.png"
                 HorizontalOptions="End"
-                Scale="1.3"/>
+                Scale="1.1"/>
 
         </StackLayout>
 
         <StackLayout Grid.Row="2"
                      Grid.ColumnSpan="3"
-                     Margin="20,0,25,0"
+                     Margin="0,0,0,5"
                      Orientation="Horizontal"
                      BackgroundColor="White">
 
-            <ImageButton Source="2Button.png"
+            <ImageButton Source="SecomndButton.png"
                          HorizontalOptions="Start"
-                         Scale="1.3"/>
-            <ImageButton Source="2Button.png"
-                         HorizontalOptions="CenterAndExpand"
-                         Scale="1.3"/>
-            <ImageButton Source="2Button.png"
+                         Scale="1.1"/>
+            <ImageButton Source="SecomndButton.png"
+                         HorizontalOptions="Center"
+                         Scale="1.1"/>
+            <ImageButton Source="SecomndButton.png"
                          HorizontalOptions="End"
-                         Scale="1.3"/>
+                         Scale="1.1"/>
 
         </StackLayout>
+
+        <Label Text="Try Something Random!"
+               TextColor="Black"
+               Margin="10,-5"
+               Grid.Row="1"
+               VerticalOptions="End"
+               Grid.ColumnSpan="3"/>
 
         <Label Text="Recommendations"
                TextColor="Black"
