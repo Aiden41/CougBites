@@ -71,41 +71,39 @@
                 ScaleX="0.75"
                 BackgroundColor="White"/>
 
+        <StackLayout Grid.Row="3"
+                     Grid.ColumnSpan="3"
+                     Orientation="Horizontal"
+                     Margin="20,0,25,0"
+                     BackgroundColor="White">
+
+            <ImageButton Source="Button.png"
+                HorizontalOptions="Start"                       
+                Scale="1.3"/>
+            <ImageButton Source="Button.png"
+                HorizontalOptions="CenterAndExpand"
+                Scale="1.3"/>
+            <ImageButton Source="Button.png"
+                HorizontalOptions="End"
+                Scale="1.3"/>
+
+        </StackLayout>
+
         <StackLayout Grid.Row="2"
                      Grid.ColumnSpan="3"
-                     Margin="20"
+                     Margin="20,0,25,0"
                      Orientation="Horizontal"
                      BackgroundColor="White">
 
             <ImageButton Source="Button.png"
                          HorizontalOptions="Start"
-                         Scale="1.5"/>
+                         Scale="1.3"/>
             <ImageButton Source="Button.png"
                          HorizontalOptions="CenterAndExpand"
-                         Scale="1.5"/>
+                         Scale="1.3"/>
             <ImageButton Source="Button.png"
                          HorizontalOptions="End"
-                         Scale="1.5"/>
-
-        </StackLayout>
-
-        <StackLayout Grid.Row="3"
-                     Grid.ColumnSpan="3"
-                     Orientation="Horizontal"
-                     HorizontalOptions="FillAndExpand">
-
-            <ImageButton Source="Button.png"
-                HorizontalOptions="Start"                       
-                ScaleY="1"
-                ScaleX="1"/>
-            <ImageButton Source="Button.png"
-                HorizontalOptions="CenterAndExpand"
-                ScaleY="1"
-                ScaleX="1"/>
-            <ImageButton Source="Button.png"
-                HorizontalOptions="End"
-                ScaleY="1"
-                ScaleX="1"/>
+                         Scale="1.3"/>
 
         </StackLayout>
 
