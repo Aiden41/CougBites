@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace CougBites.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class SearchViewModel : BaseViewModel
     {
         private Item _selectedItem;
 
@@ -17,9 +17,9 @@ namespace CougBites.ViewModels
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public SearchViewModel()
         {
-            Title = "Meal Planner";
+            Title = "Search";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
