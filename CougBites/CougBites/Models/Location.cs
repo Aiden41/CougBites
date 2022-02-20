@@ -8,8 +8,8 @@ namespace CougBites.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        //Picture
-        //Hours of Operation
+        public string Picture { get; set; }
+        public string Description { get; set; }
         public FoodItem[] FoodItems { get; set; }
         public string Menu { get; set; }
     }
