@@ -8,7 +8,6 @@ using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using System.Collections.Generic;
-using Android.Util;
 
 namespace CougBites
 {
@@ -25,9 +24,6 @@ namespace CougBites
                     database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyDB.db3"));
                 }
 
-                if (database == null)
-                    Log.Debug("LOL", "KC SUCKS");
-
                 return database;
             }
         }
@@ -43,8 +39,6 @@ namespace CougBites
 
         async public void Datatest()
         {
-            if (database == null)
-                Log.Debug("LOL", "KC SUCKS");
             await App.database.SaveFoodAsync(new Models.FoodItem
             {
                 Name = "Muffin"
