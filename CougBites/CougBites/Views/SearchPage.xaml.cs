@@ -19,14 +19,32 @@ namespace CougBites.Views
         public SearchPage()
         {
             InitializeComponent();
-
+            
             BindingContext = _viewModel = new SearchViewModel();
+
+            /*void OnTextChanged(object sender, EventArgs e)
+            {
+
+                SearchBar searchBar = (SearchBar)sender;
+                searchBar.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+
+
+            }*/
+
+
         }
+
+
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             _viewModel.OnAppearing();
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
