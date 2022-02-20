@@ -125,10 +125,13 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ButtonSmol.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionCougBitesAndroidHideInfoBar="True" XamarinHotReloadUnhandledDeviceExceptionCougBitesAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadUnhandledDeviceExceptionCougBitesAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionCougBitesAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

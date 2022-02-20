@@ -17,7 +17,8 @@
 
     <Grid BackgroundColor="#FFFFFF" RowSpacing="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
@@ -27,12 +28,6 @@
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
-        <Label Text="For You"
-               TextColor="Black"
-               Margin="10"
-               Grid.Row="0"
-               Grid.ColumnSpan="2"/>
 
         <ImageButton Source="leftArrow.png"
                 Scale="0.5"
@@ -44,6 +39,7 @@
         <ImageButton Source="Button.png"
                 HorizontalOptions="CenterAndExpand"
                 ScaleY="0.9"
+                ScaleX="1.5"
                 Grid.Row="0"
                 Grid.Column="1"/>
         <ImageButton Source="rightArrow.png" 
@@ -54,12 +50,6 @@
                 Grid.Column="2"
                 BackgroundColor="White"/>
 
-        <Label Text="Recommendations"
-               TextColor="Black"
-               Margin="10"
-               Grid.Row="1"
-               Grid.ColumnSpan="2"/>
-
         <ImageButton Source="leftArrow.png"
                 HorizontalOptions="StartAndExpand"
                 Grid.Row="1"
@@ -67,13 +57,12 @@
                 Scale="0.5"
                 ScaleX="0.75"
                 BackgroundColor="White"/>
-        <Button HorizontalOptions="CenterAndExpand"
-                Text="Food Option" 
-                Grid.Row="1"
-                Grid.Column="1"
+        <ImageButton Source="Button.png"
+                HorizontalOptions="CenterAndExpand"
                 ScaleY="0.9"
-                FontSize="16" 
-                TextColor="Black"/>
+                ScaleX="1.5"
+                Grid.Row="1"
+                Grid.Column="1"/>
         <ImageButton Source="rightArrow.png" 
                 HorizontalOptions="EndAndExpand"
                 Grid.Row="1"
@@ -82,27 +71,55 @@
                 ScaleX="0.75"
                 BackgroundColor="White"/>
 
-        <ImageButton Source="leftArrow.png"
-                Grid.Row="2"
-                Grid.Column="0"                    
-                HorizontalOptions="StartAndExpand"
-                Scale="0.5"
-                ScaleX="0.75"
-                BackgroundColor="White"/>
-        <Button HorizontalOptions="CenterAndExpand"
-                Text="Food Option" 
-                Grid.Row="2"
-                Grid.Column="1"
-                ScaleY="0.9"
-                FontSize="16" 
-                TextColor="Black"/>
-        <ImageButton Source="rightArrow.png" 
-                HorizontalOptions="EndAndExpand"
-                Grid.Row="2"
-                Grid.Column="2"
-                Scale="0.5"
-                ScaleX="0.75"
-                BackgroundColor="White"/>
+        <StackLayout Grid.Row="2"
+                     Grid.ColumnSpan="3"
+                     Margin="20"
+                     Orientation="Horizontal"
+                     BackgroundColor="White">
+
+            <ImageButton Source="Button.png"
+                         HorizontalOptions="Start"
+                         Scale="1.5"/>
+            <ImageButton Source="Button.png"
+                         HorizontalOptions="CenterAndExpand"
+                         Scale="1.5"/>
+            <ImageButton Source="Button.png"
+                         HorizontalOptions="End"
+                         Scale="1.5"/>
+
+        </StackLayout>
+
+        <StackLayout Grid.Row="3"
+                     Grid.ColumnSpan="3"
+                     Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand">
+
+            <ImageButton Source="Button.png"
+                HorizontalOptions="Start"                       
+                ScaleY="1"
+                ScaleX="1"/>
+            <ImageButton Source="Button.png"
+                HorizontalOptions="CenterAndExpand"
+                ScaleY="1"
+                ScaleX="1"/>
+            <ImageButton Source="Button.png"
+                HorizontalOptions="End"
+                ScaleY="1"
+                ScaleX="1"/>
+
+        </StackLayout>
+
+        <Label Text="Recommendations"
+               TextColor="Black"
+               Margin="10"
+               Grid.Row="1"
+               Grid.ColumnSpan="2"/>
+
+        <Label Text="For You"
+               TextColor="Black"
+               Margin="10"
+               Grid.Row="0"
+               Grid.ColumnSpan="2"/>
 
         <!--<ScrollView Grid.Row="3" Margin="5" BackgroundColor="LightGray">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
