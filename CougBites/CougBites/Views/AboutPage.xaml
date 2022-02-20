@@ -77,13 +77,13 @@
                      Margin="20,0,25,0"
                      BackgroundColor="White">
 
-            <ImageButton Source="Button.png"
+            <ImageButton Source="2Button.png"
                 HorizontalOptions="Start"                       
                 Scale="1.3"/>
-            <ImageButton Source="Button.png"
+            <ImageButton Source="2Button.png"
                 HorizontalOptions="CenterAndExpand"
                 Scale="1.3"/>
-            <ImageButton Source="Button.png"
+            <ImageButton Source="2Button.png"
                 HorizontalOptions="End"
                 Scale="1.3"/>
 
@@ -95,13 +95,13 @@
                      Orientation="Horizontal"
                      BackgroundColor="White">
 
-            <ImageButton Source="Button.png"
+            <ImageButton Source="2Button.png"
                          HorizontalOptions="Start"
                          Scale="1.3"/>
-            <ImageButton Source="Button.png"
+            <ImageButton Source="2Button.png"
                          HorizontalOptions="CenterAndExpand"
                          Scale="1.3"/>
-            <ImageButton Source="Button.png"
+            <ImageButton Source="2Button.png"
                          HorizontalOptions="End"
                          Scale="1.3"/>
 

@@ -16250,7 +16250,7 @@ namespace CougBites.Droid
 		{
 			
 			// aapt resource value: 0x7F070006
-			public const int 2Button = 2131165190;
+			public const int 2ndButton = 2131165190;
 			
 			// aapt resource value: 0x7F070007
 			public const int abc_ab_share_pack_mtrl_alpha = 2131165191;
