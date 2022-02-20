@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -8,6 +8,8 @@ using SQLite;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using System.IO;
+using Android.Util;
+using System.Linq;
 
 namespace CougBites.Droid
 {
@@ -15,15 +17,16 @@ namespace CougBites.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Window.AddFlags(Android.Views.WindowManagerFlags.TranslucentStatus);
             Window.AddFlags(Android.Views.WindowManagerFlags.TranslucentNavigation);
             LoadApplication(new App());
+            List<Models.FoodItem> foods = await App.database.GetFoodAsync();
+            Log.Debug("lol", foods[0].ID.ToString());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

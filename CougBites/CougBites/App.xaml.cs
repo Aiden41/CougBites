@@ -7,27 +7,48 @@ using SQLite;
 using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using System.Collections.Generic;
+using Android.Util;
 
 namespace CougBites
 {
     public partial class App : Application
     {
-        public static SQLiteAsyncConnection db;
+        public static Database database;
+
+        public static Database Database
+        {
+            get
+            {
+                if(database == null)
+                {
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyDB.db3"));
+                }
+
+                if (database == null)
+                    Log.Debug("LOL", "KC SUCKS");
+
+                return database;
+            }
+        }
 
         public App()
         {
-            InitializeComponent();
-            InitDatabase();
+            database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyDB.db3"));
+            InitializeComponent();    
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
+            Datatest();
         }
 
-        public static async Task InitDatabase()
+        async public void Datatest()
         {
-            var databasePath = Path.Combine(FileSystem.AppDataDirectory, "MyDB.db");
-            var db = new SQLiteAsyncConnection(databasePath);
-            await db.CreateTableAsync<Models.FoodItem>();
-          //  using (var reader = new StreamReader(Path.Combine(FileSystem.AppDataDirectory, "Mydata.csv"))
+            if (database == null)
+                Log.Debug("LOL", "KC SUCKS");
+            await App.database.SaveFoodAsync(new Models.FoodItem
+            {
+                Name = "Muffin"
+            });
         }
 
         protected override void OnStart()
