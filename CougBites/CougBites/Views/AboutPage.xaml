@@ -15,7 +15,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid BackgroundColor="#4D4D4D" RowSpacing="5">
+    <Grid BackgroundColor="#4D4D4D" RowSpacing="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -31,7 +31,10 @@
                         ScaleX="0.5"
                         Text="LeftTemp"/>
                 <Button HorizontalOptions="CenterAndExpand"
-                        Text="Food Option" FontSize="16" TextColor="Black"/>
+                        Text="Food Option" 
+                        ScaleY="0.9"
+                        FontSize="16" 
+                        TextColor="Black"/>
                 <Button HorizontalOptions="EndAndExpand"
                         ScaleY="0.5"
                         ScaleX="0.5"
@@ -47,7 +50,10 @@
                     ScaleX="0.5"
                     Text="LeftTemp"/>
             <Button HorizontalOptions="CenterAndExpand"
-                    Text="Food Option" FontSize="16" TextColor="Black"/>
+                    Text="Food Option" 
+                    ScaleY="0.9"
+                    FontSize="16" 
+                    TextColor="Black"/>
             <Button HorizontalOptions="EndAndExpand"
                     ScaleY="0.5"
                     ScaleX="0.5"
@@ -58,16 +64,19 @@
         <StackLayout Grid.Row="2"
                      Orientation="Horizontal"
                      BackgroundColor="White">
-            <Button HorizontalOptions="StartAndExpand"
+            <ImageButton Source="left.png"
+                    HorizontalOptions="StartAndExpand"
                     ScaleY="0.5"
-                    ScaleX="0.5"                    
-                    Text="LeftTemp"/>
+                    ScaleX="0.5"/>
             <Button HorizontalOptions="CenterAndExpand"
-                    Text="Food Option" FontSize="16" TextColor="Black"/>
-            <Button HorizontalOptions="EndAndExpand"
-                    ScaleY="0.5"
-                    ScaleX="0.5"                    
-                    Text="RightTemp"/>
+                    Text="Food Option" 
+                    ScaleY="0.9"
+                    FontSize="16" 
+                    TextColor="Black"/>
+            <ImageButton Source="right.png" 
+                    HorizontalOptions="EndAndExpand"
+                    ScaleY="1"
+                    ScaleX="1"/>
 
         </StackLayout>
 
