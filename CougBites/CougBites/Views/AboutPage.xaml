@@ -41,13 +41,11 @@
                 Grid.Column="0"
                 HorizontalOptions="StartAndExpand"
                 BackgroundColor="#FFFFFF"/>
-        <Button HorizontalOptions="CenterAndExpand"
-                Text="Food Option" 
+        <ImageButton Source="Button.png"
+                HorizontalOptions="CenterAndExpand"
                 ScaleY="0.9"
-                FontSize="16" 
                 Grid.Row="0"
-                Grid.Column="1"
-                TextColor="Black"/>
+                Grid.Column="1"/>
         <ImageButton Source="rightArrow.png" 
                 HorizontalOptions="EndAndExpand"
                 Scale="0.5"
